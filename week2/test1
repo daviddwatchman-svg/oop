@@ -1,0 +1,33 @@
+while True:
+    print("1. area of a rectangle")
+    print("2. volume of a cube")
+    print("3. area of a circle")
+    print("4. circumference of a circle")
+    print("5. exit")
+    choice = int(input("Enter operation number: "))
+
+    if choice == 1:
+        length1 = float(input("Enter the length: "))
+        width1 = float(input("Enter the width: "))
+        print("area =", length1*width1)
+    elif choice == 2:
+        length2 = float(input("Enter the length: "))
+        width2 = float(input("Enter the width: "))
+        height2 = float(input("Enter the height: "))
+        print("volume = ", length2*width2*height2)
+    elif choice == 3:
+        radius1 = float(input("Enter the radius: "))
+        print("Area =", radius1 * radius1 * 3.14)
+    elif choice == 4:
+        radius2 = float(input("Enter the radius: "))
+        print("Circumference =", 2 * radius2 * 3.14)
+    elif choice == 5:
+        exit()
+    else:
+        print("Invalid input")
+    exit()
+
+
+
+
+
