@@ -1,0 +1,31 @@
+man = []
+while True:
+    print("Option 1: Append a value.")
+    print("Option 2: Remove a value.")
+    print("Option 3: Replace a value.")
+    print("Option 4: Print list.")
+    print("option 5: Sort list.")
+    print("Option 6: Exit")
+    option = int(input("Enter your option: "))
+    if option == 1:
+        append = int(input("Enter your value: "))
+        man.append(append)
+    elif option == 2:
+        remove = int(input("Enter your value: "))
+        man.remove(remove)
+    elif option == 3:
+        old_element = int(input("Replace a value."))
+        index = man.index(old_element)
+        man[index] = old_element
+        new_element = int(input("Enter your new value: "))
+        man.insert(index+1, new_element)
+        man.remove(old_element)
+    elif option == 5:
+        man.sort()
+    elif option == 4:
+        print(man)
+    elif option == 6:
+        print("Exiting.")
+        break
+    else:
+        break
