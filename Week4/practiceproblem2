@@ -1,0 +1,16 @@
+Course_Directory = {}
+
+while 1:
+    print()
+    print("Welcome to the Course Directory Program")
+    print("Enter number '1' to add to the dictionary.")
+    print("Enter number '2' to Remove from the dictionary.")
+    print("Enter number '3' to replace a term in the dictionary.")
+    print("Enter number '4' to print an the dictionary.")
+    print("Enter number '5' to exit the program.")
+    choice = input("Enter your choice: ")
+    if choice == "1" or choice == "one":
+        add1 = input("Enter course name: ")
+        Course_Directory.update({"Course1": add1})
+    elif choice == "2" or choice == "two":
+        delete1 = input("Choose a term to remove: ")
