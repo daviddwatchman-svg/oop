@@ -1,0 +1,15 @@
+"""
+Prompt: "Find the prime numbers from a range of values obtained from the user."
+"""
+mylist = []
+print("Welcome to Prime Number evaluator.")
+print("Enter 'exit' to end the program.")
+
+while True:
+    number = input("Enter a number, 'exit' to finsh the program, or 'prime' to display all prime numbers in the list: ")
+    try:
+        typified_number = int(number)
+        mylist.append(typified_number)
+        print(mylist)
+    except ValueError or :
+        print("Please enter a integer.")
