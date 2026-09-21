@@ -1,0 +1,43 @@
+def add():
+    a = int(input("Enter a number: "))
+    b = int(input("Enter another number: "))
+    print("The total is", a + b)
+def subtract():
+    a = int(input("Enter a number: "))
+    b = int(input("Enter another number: "))
+    print("The difference is", a - b)
+def divide():
+    a = int(input("Enter a number: "))
+    b = int(input("Enter another number: "))
+    if b == 0:
+        print("Division by zero!")
+    else:
+        print("The division is", a / b)
+def multiply():
+    a = int(input("Enter a number: "))
+    b = int(input("Enter another number: "))
+    print("The product is", a * b)
+
+while True:
+    print("1 for addition")
+    print("2 for subtraction")
+    print("3 for division")
+    print("4 for multiplication")
+    print("5 for exit")
+    choice = input("Enter a choice: ")
+    try:
+        choice = int(choice)
+        if choice == 1:
+            add()
+        elif choice == 2:
+            subtract()
+        elif choice == 3:
+            divide()
+        elif choice == 4:
+            multiply()
+        elif choice == 5:
+            break
+        else:
+            print("Enter a number from one to four")
+    except ValueError:
+        print("Enter an integer!")
