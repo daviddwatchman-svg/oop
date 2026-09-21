@@ -1,0 +1,29 @@
+myQueue = []
+def enqueue():
+    item = input("Enter a number: ")
+    myQueue.append(item)
+def dequeue():
+    myQueue.pop(0)
+def printqueue():
+    print(myQueue)
+
+while True:
+    print("Enter 1 to enqueue")
+    print("Enter 2 to dequeue")
+    print("Enter 3 to print")
+    print("Enter 4 to exit")
+    option = input("Enter operation: ")
+    try:
+        option = int(option)
+        if option == 1:
+            enqueue()
+        elif option == 2:
+            dequeue()
+        elif option == 3:
+            printqueue()
+        elif option == 4:
+            break
+        else:
+            print("Enter a valid option")
+    except ValueError:
+        print("Enter an integer")
