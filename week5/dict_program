@@ -1,0 +1,40 @@
+"""
+Create a program that can add, replace, print, or remove items in a dictionary
+"""
+n = 1
+mydict = {}
+while True:
+    print("Select option.")
+    print("1. Add an item to the dictionary.")
+    print("2. Remove an item from the dictionary.")
+    print("3. Print the dictionary.")
+    print("4. Edit an item from the dictionary.")
+    print("5. Exit")
+    choice = input("Enter your choice: ")
+    try :
+        choice = int(choice)
+        if choice == 1:
+            name = input("Add a student: ")
+            key = "student"+str(n)
+            mydict[key] = name
+            n += 1
+        elif choice == 2:
+            to_remove = input("What student should I remove?: ")
+            for key, value in mydict.items():
+                if value == to_remove:
+                    remove_key = key
+                    break
+            del mydict[remove_key]
+        elif choice == 3:
+            print(mydict)
+        elif choice == 4:
+            replace = input("Which value should I replace?: ")
+            for key, value in mydict.items():
+                if value == replace:
+                    replacekey = key
+                    break
+            mydict[replacekey] = input("What value should I replace?: ")
+        else:
+            print("Please enter a number from 1 to 5")
+    except ValueError:
+        print("Please enter a number")
